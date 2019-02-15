@@ -549,9 +549,8 @@ impl VM
         // open the file
         let mut file = File::open(filename).expect("file error");
 
-        // check file size
+        // get the file size
         let fsize = file.metadata().unwrap().len();
-        println!("file size: {}", fsize);
 
         // read the file to a buffer
         let mut buffer = vec![];
